@@ -2,25 +2,31 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h1 {
-    text-align: center;
     color: #333;
 }
 
 #searchInput {
     width: 100%;
-    padding: 10px;
-    margin: 20px 0;
+    padding: 12px;
+    margin-top: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -30,27 +36,31 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px;
 }
 
 .actress-card {
-    width: 200px;
-    margin: 15px;
-    padding: 10px;
+    width: 250px;
+    padding: 15px;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.actress-card:hover {
+    transform: translateY(-10px);
 }
 
 .actress-card img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .actress-card h3 {
-    font-size: 18px;
-    color: #333;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
 .actress-card p {
@@ -60,7 +70,13 @@ h1 {
 
 .actress-card a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     color: #007bff;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
 }
