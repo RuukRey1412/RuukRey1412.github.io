@@ -3,15 +3,15 @@ window.onload = function() {
     const actressList = document.getElementById('actressList');
 
     function displayActresses(filteredActresses) {
-        actressList.innerHTML = "";
+        actressList.innerHTML = "";  // リストをクリア
         filteredActresses.forEach(actress => {
             const actressCard = document.createElement('div');
             actressCard.classList.add('actress-card');
             actressCard.innerHTML = `
-                <img src="${actress.img}" alt="${actress.name}">
                 <h3>${actress.name}</h3>
-                <p>${actress.genre}</p>
+               
                 <a href="${actress.link}" target="_blank">詳細を見る</a>
+                ${actress.video ? '' : ''}  <!-- メディアの部分を削除 -->
             `;
             actressList.appendChild(actressCard);
         });
@@ -19,13 +19,13 @@ window.onload = function() {
 
     function filterActresses() {
         const query = searchInput.value.toLowerCase();
-        const filteredActresses = actresses.filter(actress => 
-            actress.name.toLowerCase().includes(query) || 
+        const filteredActresses = actresses.filter(actress =>
+            actress.name.toLowerCase().includes(query) ||
             actress.genre.toLowerCase().includes(query)
         );
         displayActresses(filteredActresses);
     }
 
     searchInput.addEventListener('input', filterActresses);
-    displayActresses(actresses); // 初期表示
+    displayActresses(actresses);  // 初期表示
 };
