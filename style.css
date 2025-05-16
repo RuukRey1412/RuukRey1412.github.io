@@ -1,82 +1,106 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #fffbf1;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h1 {
-    color: #333;
+    color: #ff6f61;
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(255, 111, 97, 0.3);
 }
 
 #searchInput {
     width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 18px;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.2);
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #ff4081;
+    outline: none;
+    background-color: #fff5f8;
 }
 
 .actress-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+    gap: 25px;
 }
 
 .actress-card {
     width: 250px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffebf2;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .actress-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) rotate(-3deg);
+    background-color: #fff0f5;
 }
 
 .actress-card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(255, 111, 97, 0.3);
 }
 
 .actress-card h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin: 10px 0;
+    color: #ff4081;
 }
 
 .actress-card p {
-    font-size: 14px;
-    color: #666;
+    font-size: 15px;
+    color: #555;
 }
 
 .actress-card a {
     display: inline-block;
     margin-top: 15px;
-    color: #007bff;
+    color: #ff4081;
     text-decoration: none;
     font-weight: bold;
+    background-color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.actress-card a:hover {
+    background-color: #ff4081;
+    color: #fff;
 }
 
 .video-container {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
